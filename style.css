@@ -1,0 +1,48 @@
+body{
+    background-color: rgba(209, 204, 204, 0.9);
+}
+#wins{
+    color: rgba(62, 219, 62, 0.938);
+}
+#draws{
+    color: rgba(2, 2, 2, 0.945);
+}
+#loses{
+    color: rgba(196, 18, 18, 0.897);
+}
+img{
+    max-width: 100px;
+}
+.scoreboard{
+
+    border-color: rgba(23, 29, 27, 0.781);
+    border-radius: 25px;
+}
+.gameboard{
+    margin-top: 50px;
+    min-width: 580px;
+    background-color: rgba(250, 245, 226, 0.9);
+    border-color: rgba(10, 6, 6, 0.24); 
+    border-radius: 25px;
+}
+.menu{
+    margin: 20px;
+    background-color: rgba(92, 132, 206, 0.548);
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 580px) {
+    container{
+        width: 100%;
+    }
+    #playerHand.img-fluid {
+      max-width: 50px;
+    }
+    #compHand.img-fluid {
+        max-width: 50px;
+      }
+    div.col-sm-5.pc_backDrop{
+        max-width: 70px;
+    }
+  }
+  

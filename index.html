@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- last updated 052220 by J Hudgins. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar (fixed top) -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand">Rock|Papers|Scissors|Shoot!</a>
+            <!-- Button trigger modal for Contribution -->
+            <a type="button" class="nav-link" data-toggle="modal" data-target="#exampleModal">Contribution</a>
+        </div>
+    </nav>
+
+<!-- scores here -->
+<div class="container fluid-width gameboard">
+    <div class="row scoreboard">
+        <div class="col-sm-4">
+            <p>Your Score: </p><p id="wins"></p>
+        </div>
+        <div class="col-sm-4 content-center ">
+            <span><p>Tied Games: </p><p id="draws"></p></span>
+        </div>
+        <div class="col-sm-4">
+            <span><p>Computer Score: </p><p id="loses"></p></span>
+        </div>
+    </div>
+
+<!-- game container here -->
+    <div class="row">
+        <div class="col-sm-5 p1_backDrop">
+            <img id="playerHand" class="img-fluid" src="./Assets/Shake.gif" alt="shaking fist">
+        </div>
+        <div class="col-sm-2 content-center">
+            <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                <button id="rockbtn" type="button" class="btn btn-secondary" onclick="playRock()">Rock</button>
+                <button id="paperbtn" type="button" class="btn btn-secondary" onclick="playPaper()">Paper</button>
+                <button id="scissorsBtn" type="button" class="btn btn-secondary" onclick="playScissors()">Scissors</button>
+                <!-- <button id="playTheGame" type="button" class="btn btn-secondary" onclick="playTheGame(ourGuess)">Shoot</button> -->
+            </div>               
+        </div>
+        <div class="col-sm-5 pc_backDrop">
+            <img id="compHand" class="img-fluid" src="./Assets/PCShake.gif" alt="shaking fist">
+        </div>
+    </div>
+</div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dev Team</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>This game was made by:</p>
+          <ul>
+              <li>Andrew Raines </li>
+              <li>Ricardo Manosalva</li>
+              <li>Don Tron</li>
+              <li>James Hudgins</li>
+          </ul>
+          <strong>You guys rock!</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- link to game logic -->
+<script src="GameLogic.js"></script>
+<script src="PlayTheGame.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
